@@ -32,7 +32,7 @@ Before starting, make sure you have the following installed:
     ```
 2. After navigating into the project directory, install all PHP dependencies using Composer.
     ```bash
-    composer update
+    composer install
     ```
 
 3. Next, install all JavaScript dependencies using NPM to set up the frontend (Vue + Element Plus).
@@ -64,14 +64,16 @@ Before starting, make sure you have the following installed:
     php artisan migrate
     php artisan migrate:tickets    
     ```
-8. After migrating, seed the database with a default admin user by running the AdminSeeder class.
+8. After migrating, seed the database with a default admin user by running the AdminSeeder class and some Fake Tickets.
     ```bash
     php artisan db:seed --class=AdminSeeder
+    php artisan db:seed --class=MultiDatabaseTicketSeeder
     ```
 
 9. Once everything is migrated and seeded, start the Laravel backend server using `php artisan serve`. It will launch the backend at `http://127.0.0.1:8000` by default.
 
-10. To run the Vue frontend (handled by Vite), start the dev server using `npm run dev`.
+10. To run the Vue frontend (handled by Vite), start the dev server using 
+    `npm run dev` or `npm run build`
 
 11. Open your browser and navigate to the Laravel serve URL to start using the Support Ticket System.
     `http://127.0.0.1:8000`
