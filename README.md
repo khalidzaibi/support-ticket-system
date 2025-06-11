@@ -59,22 +59,25 @@ Before starting, make sure you have the following installed:
    - assignment_technical
 
 
-9. Once the connections are ready, run the Laravel migrations. Start by running the default migrations to create tables in the main database. Then run the custom `php artisan migrate:tickets` command which will handle migrations for all department-specific databases.
+7. Once the connections are ready, run the Laravel migrations. Start by running the default migrations to create tables in the main database. Then run the custom `php artisan migrate:tickets` command which will handle migrations for all department-specific databases.
     ```bash
     php artisan migrate
     php artisan migrate:tickets    
     ```
-11. After migrating, seed the database with a default admin user by running the AdminSeeder class.
+8. After migrating, seed the database with a default admin user by running the AdminSeeder class.
     ```bash
     php artisan db:seed --class=AdminSeeder
     ```
 
-12. Once everything is migrated and seeded, start the Laravel backend server using `php artisan serve`. It will launch the backend at `http://127.0.0.1:8000` by default.
+9. Once everything is migrated and seeded, start the Laravel backend server using `php artisan serve`. It will launch the backend at `http://127.0.0.1:8000` by default.
 
-13. To run the Vue frontend (handled by Vite), start the dev server using `npm run dev`.
+10. To run the Vue frontend (handled by Vite), start the dev server using `npm run dev`.
 
-14. Open your browser and navigate to the Laravel serve URL to start using the Support Ticket System.
-`http://127.0.0.1:8000`
+11. Open your browser and navigate to the Laravel serve URL to start using the Support Ticket System.
+    `http://127.0.0.1:8000`
+
+12. For admin login URL `http://127.0.0.1:8000/admin/login`
+
 ---
 
 ## 🔑 Default Admin Credentials
